@@ -6,6 +6,8 @@
 const hre = require("hardhat");
 
 async function main() {
+
+  // This will reset the local node to the begging of the forked state
   await hre.network.provider.request({
     method: "hardhat_reset",
     params: [
