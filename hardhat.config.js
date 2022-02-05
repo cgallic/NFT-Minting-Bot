@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv/config");
 
 require("@nomiclabs/hardhat-etherscan");
 require("@nomiclabs/hardhat-waffle");
@@ -26,12 +26,15 @@ module.exports = {
   networks: {
     ropsten: {
       url: process.env.ROPSTEN_URL || "",
-      accounts:
-        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+      accounts:process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
-    mainnet_fork: {
-      url: "https://eth-mainnet.alchemyapi.io/v2/"+process.env.ALCHEMY_KEY,
-    }
+    hardhat: {
+      forking: {
+        enabled: true,
+        url: `https://eth-mainnet.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
+        blockNumber: 13439086,
+      },
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
