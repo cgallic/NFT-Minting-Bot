@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Testing out the functionality of mass minting ERC721 tokens",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -29,7 +30,8 @@
     "prettier": "^2.5.1",
     "prettier-plugin-solidity": "^1.0.0-beta.13",
     "solhint": "^3.3.6",
-    "solidity-coverage": "^0.7.18"
+    "solidity-coverage": "^0.7.18",
+    "typescript": "^4.5.5"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.2"
