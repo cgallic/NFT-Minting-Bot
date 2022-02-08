@@ -4,6 +4,7 @@
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
 import { ethers } from "hardhat";
+import "hardhat-ethernal";
 
 async function main() {
   // Hardhat always runs the compile task when running scripts with its command
@@ -14,12 +15,17 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const IndividualMinter = await ethers.getContractFactory("DoodlesMinter");
-  const individualMinter = await IndividualMinter.deploy({value: ethers.parseEther("1.0")});
+  const DoodleMinter = await ethers.getContractFactory("DoodlesMinter");
+  const doodleMinter = await DoodleMinter.deploy({value: ethers.utils.parseEther("0.615")});
 
-  await individualMinter.deployed();
+  await doodleMinter.deployed();
+  //await hre.ethernal.push({
+  //    name: 'doodleMinter',
+  //    address: doodleMinter.address,
+  //});
 
-  console.log("IndividualMinter deployed to:", individualMinter.address);
+  console.log("doodleMinter deployed to:", doodleMinter.address);
+  console.log("transaction hash:", doodleMinter.deployTransaction.hash);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
