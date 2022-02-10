@@ -13,6 +13,9 @@ dotenv.config();
 
 let ALCHEMY_API_KEY=process.env.ALCHEMY_API_KEY;
 let DOODLES_FORK_BLOCKNUM=process.env.DOODLES_FORK_BLOCKNUM;
+let MNEMONIC=process.env.MNEMONIC;
+
+console.log(MNEMONIC);
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -41,6 +44,10 @@ const config: HardhatUserConfig = {
         url: `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,
         blockNumber: Number(DOODLES_FORK_BLOCKNUM),
       },
+      accounts: {
+        mnemonic:MNEMONIC,
+        count: 5,
+      }
     },
   },
   // config for the hardhat-deploy plugin
