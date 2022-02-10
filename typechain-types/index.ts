@@ -2,25 +2,11 @@
 /* tslint:disable */
 /* eslint-disable */
 export type { Ownable } from "./Ownable";
-export type { ERC721 } from "./ERC721";
-export type { IERC721Metadata } from "./IERC721Metadata";
-export type { IERC721 } from "./IERC721";
-export type { IERC721Receiver } from "./IERC721Receiver";
-export type { ERC165 } from "./ERC165";
-export type { IERC165 } from "./IERC165";
 export type { AdidasMinter } from "./AdidasMinter";
 export type { Doodles } from "./Doodles";
 export type { DoodlesMinter } from "./DoodlesMinter";
-export type { Minter } from "./Minter";
 
 export { Ownable__factory } from "./factories/Ownable__factory";
-export { ERC721__factory } from "./factories/ERC721__factory";
-export { IERC721Metadata__factory } from "./factories/IERC721Metadata__factory";
-export { IERC721__factory } from "./factories/IERC721__factory";
-export { IERC721Receiver__factory } from "./factories/IERC721Receiver__factory";
-export { ERC165__factory } from "./factories/ERC165__factory";
-export { IERC165__factory } from "./factories/IERC165__factory";
 export { AdidasMinter__factory } from "./factories/AdidasMinter__factory";
 export { Doodles__factory } from "./factories/Doodles__factory";
 export { DoodlesMinter__factory } from "./factories/DoodlesMinter__factory";
-export { Minter__factory } from "./factories/Minter__factory";
