@@ -9,15 +9,15 @@ import hre from "hardhat";
 
 async function main() {
   // Setting up constants related to Doodles minting function
-  const MINT_PER_CALL = 5; 
-  const MINT_PRICE = 0.123; 
+  const MAX_PUBLIC_MINT = 5; 
+  const PRICE_PER_TOKEN = 0.123; 
 
   // setting up the contract by linking it to the one we deployed
   const doodlesMinter = await ethers.getContract("DoodlesMinter");
   
   // setting up params for the mint transaction
   let mintCalls = 10; // how many times we want to call
-  let totalMintCost = mintCalls * MINT_PRICE * MINT_PER_CALL;
+  let totalMintCost = mintCalls * MAX_PUBLIC_MINT * PRICE_PER_TOKEN;
   let options = {value: ethers.utils.parseEther(totalMintCost.toString())}
   
   // sending transaction 
