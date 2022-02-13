@@ -45,7 +45,7 @@ const config: HardhatUserConfig = {
       accounts: {
         mnemonic:MNEMONIC,
         count: 10,
-      }
+      },
     },
   },
   // config for the hardhat-deploy plugin
