@@ -1,5 +1,5 @@
 {
-  "name": "massminting",
+  "name": "nft-mass-minting",
   "version": "1.0.0",
   "description": "Testing out the functionality of mass minting ERC721 tokens",
   "main": "index.js",
