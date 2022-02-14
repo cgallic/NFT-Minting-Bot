@@ -22,6 +22,7 @@ async function main() {
   
   // sending transaction 
   let tx = await doodlesMinter.mint(10, options);
+  console.log(tx);
   let receipt = await tx.wait();
   console.log(receipt);
 }

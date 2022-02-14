@@ -3,15 +3,15 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-
+import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 
 // @title Doodles NFT mass minter
 // @author NME.eth
-contract DoodlesMinter is Ownable {
+contract DoodlesMinter is Ownable, ERC721Holder {
     address doodlesAddr = 0x8a90CAb2b38dba80c64b7734e58Ee1dB38B8992e;
     Doodles doodlesContract;
 
-    constructor() public Ownable() {
+    constructor() Ownable() {
         doodlesContract = Doodles(doodlesAddr);
     }
 
@@ -21,6 +21,7 @@ contract DoodlesMinter is Ownable {
         for (uint i = 0; i < numMints; i++) {
             // 0.123 (mint price per one) * 5 (number to mint) = 0.615 ether 
             doodlesContract.mint{value: 0.615 ether}(5);
+            console.log();
         }
     }
 
