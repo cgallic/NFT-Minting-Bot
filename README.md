@@ -1,10 +1,9 @@
 # NFT Minting Bot
-This repo showcases two examples on how custom smart contracts can be used to **mass mint NFTs using only a single transaction**.\
-> bot implementations vary significantly for each NFT collection as most NFT smart contracts have their own unique Mint functions
+This repo contains two examples on how custom smart contract can be used to **mass mint NFTs in a single transaction**
 
 ## Technology Stack & Tools
 - Solidity (Writing Smart Contracts)
-- TypeScript (React & Testing)
+- TypeScript (Scripts & Testing)
 - [HardHat](https://hardhat.org/getting-started/) (Smart Contract Developer Framework)
 - [Ethers.js](https://docs.ethers.io/v5/getting-started/) (Blockchain Interaction)
 - [Alchemy](https://docs.alchemy.com/cro/) (Node provider)
@@ -16,10 +15,20 @@ This repo showcases two examples on how custom smart contracts can be used to **
 - [HardHat Ethernal](https://www.npmjs.com/package/hardhat-ethernal) (Local blockchain explorer)
 
 ## Installation 
-To install all dependencies just run 
-`
+To install the repo and all dependencies run 
+```
+git clone https://github.com/NME-eth/NFT-Minting-Bot.git
+cd NFT-Minting-Bot
 npm install
-`
+```
+Set up the `.env` config file. I recommend signing up to [Alchemy](https://docs.alchemy.com/cro/) but any other node provider works. 
+>we will be creating our local test environment by forking the Mainnet, alchemy is effective with forking due to their efficient caching.
+```
+MAINNET_URL=https://eth-mainnet.alchemyapi.io/v2/"<your-api-key-here>"
+DOODLES_FORK_BLOCKNUM=13439086 // This is the block number when minting for Doodles Starts
+ADIDAS_FORK_BLOCKNUM=13439086 // This is the block number when minting for Adidas NFT Starts
+MNEMONIC="<your-twelve-word-mneomonic-here>"
+```
 
 ## Set up
 
