@@ -1,5 +1,5 @@
 # NFT Minting Bot
-This repo showcases two examples of how smart contracts can be used to mass mint an NFT collection. 
+This repo showcases two examples on how *smart contracts* can be used to *mass mint NFTs in a single transaction*.\
 Bot implementations may vary significantly between each NFT drop as most NFT smart contracts have unique Mint functions
 
 ## Technology Stack & Tools
