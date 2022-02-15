@@ -24,8 +24,8 @@ npm install
 Set up the `.env` config file. I recommend signing up to [Alchemy](https://docs.alchemy.com/cro/) but any other node provider works. 
 ```
 MAINNET_URL=https://eth-mainnet.alchemyapi.io/v2/"<your-api-key-here>"
-DOODLES_FORK_BLOCKNUM=13439086 // this is the block number when minting for doodles starts
-ADIDAS_FORK_BLOCKNUM=13439086 // this is the block number when minting for adidas nft starts
+DOODLES_FORK_BLOCKNUM=13439086 // block number for when doodles start public minting 
+ADIDAS_FORK_BLOCKNUM=13439086 // block number for when adidas nfts start public minting 
 MNEMONIC="<your-twelve-word-mneomonic-here>"
 ```
 > we will create our test environment by running our own local blockchain which forks from the Mainnet at the blocks specified in our config file
