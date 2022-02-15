@@ -28,7 +28,7 @@ DOODLES_FORK_BLOCKNUM=13439086 // this is the block number when minting for dood
 ADIDAS_FORK_BLOCKNUM=13439086 // this is the block number when minting for adidas nft starts
 MNEMONIC="<your-twelve-word-mneomonic-here>"
 ```
-> we will be creating our test environment by running our own local blockchain which forks from the Mainnet at the blocks specified in our config file
+> we will create our test environment by running our own local blockchain which forks from the Mainnet at the blocks specified in our config file
 
 ## Set up
 
